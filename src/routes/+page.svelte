@@ -1,2 +1,216 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+    let livros = [
+      { titulo: "A Rainha Vermelha", autor: "Victoria Aveyard", preco: "30,99", precoAntigo: "34,99", genero: "Romance, Ficção Juvenil", imagem: "/path/to/image1.jpg" },
+      { titulo: "Harry Potter", autor: "J.K. Rowling", preco: "60,99", precoAntigo: "69,90", genero: "Aventura, Fantasia", imagem: "/path/to/image2.jpg" },
+      { titulo: "O Pequeno Príncipe", autor: "Antoine de Saint-Exupéry", preco: "13,50", precoAntigo: "15,60", genero: "Literatura Infantil, Fábula", imagem: "/path/to/image3.jpg" },
+      { titulo: "Amor e Gelato", autor: "Jenna Evans Welch", preco: "42,67", precoAntigo: "46,67", genero: "Ficção", imagem: "/path/to/image4.jpg" },
+      { titulo: "Como Eu Era Antes de Você", autor: "Jojo Moyes", preco: "43,50", precoAntigo: "47,92", genero: "Romance de Amor, Ficção", imagem: "/path/to/image5.jpg" }
+    ];
+  </script>
+ 
+ <header class="bg-light py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div>
+        <img src="/path/to/logo.png" alt="Leia Mais Logo" height="50">
+      </div>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a href="#" class="nav-link" style="color: black;">Início</a></li>
+          <li class="nav-item"><a href="#" class="nav-link" style="color: black;">Destaques</a></li>
+          <li class="nav-item"><a href="#" class="nav-link" style="color: black;">Lançamentos</a></li>
+          <li class="nav-item"><a href="#" class="nav-link" style="color: black;">Sobre a Marca</a></li>
+        </ul>
+      </nav>
+      <div>
+        <button class="btn btn-outline-primary">Carrinho</button>
+      </div>
+    </div>
+  </header>
+
+<section>
+  <main>    
+    <div class="main">
+                  
+        <div class="main-tag">
+          <h1><b>Seja Bem Vindo à<br><span>Leia Mais</span></b></h1>
+          <p>
+            A melhor livraria do país. Aqui você encontra diversos títulos que<br>irão te surpreender, 
+            com preços ótimos e de qualidade altissíma!
+          </p>
+      </div>
+      <div class="main image">
+          <img src="livros home.png">
+      </div>
+     </div>
+</section>
+
+    <section class="container py-5">
+        <div class="featured_boks">
+          <h1><b>Livros em Destaque</b></h1>
+          <div class="featured_books_box">
+            {#each livros as livro}
+            <div class="features-books_card">
+              <div class="featured_books_img">
+                <img src="a rainha vermelha.jpg" alt="{livro.titulo}">
+              </div>
+              <div class="featured_books_tag">
+                <h2>{livro.titulo}</h2>
+                <p class="writer">{livro.autor}</p>
+                <div class="categories">{livro.genero}</div>
+                <p class="book_price">{livro.preco}<sub><del>{livro.precoAntigo}</del></sub></p>
+                <a href="#" class="f_btn">Saiba Mais</a>
+              </div>
+            </div>
+            {/each}
+          </div>
+        </div>
+      </section>
+
+
+  <footer class="bg-primary text-white py-4">
+    <div class="container d-flex justify-content-between">
+      <div>
+        <h5>Leia Mais</h5>
+        <p>O sonho de levar sorrisos a cada história!</p>
+      </div>
+      <div>
+        <h5>Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white">Início</a></li>
+          <li><a href="#" class="text-white">Destaques</a></li>
+          <li><a href="#" class="text-white">Lançamentos</a></li>
+          <li><a href="#" class="text-white">Sobre a Marca</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contatos</h5>
+        <p>+55 (18) 4002-8922</p>
+        <p>+55 (18) 5478-3214</p>
+        <p>leiamais@gmail.com</p>
+      </div>
+      <div>
+        <h5>Redes Sociais</h5>
+        <p>Facebook: @LeiaMais</p>
+        <p>Instagram: @LeiaMais</p>
+        <p>Twitter: @LeiaMais</p>
+      </div>
+    </div>
+  </footer>
+
+<style>
+section .main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 10%;
+}
+
+section .main h1{
+    position: relative;
+    font-size: 70px;
+    top: 20px;
+    left:25px;
+}
+
+section .main h1 span{
+    color: rgb(38, 52, 119);    
+}
+
+section .main p{
+    width: 650px;
+    text-align: justify;
+    line-height: 22px;
+    position: relative;
+    top: 20px;
+    left: 25px;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track{
+   box-shadow: inset 0 0 8px rgba(0, 0, 0,0.2);
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgb(38, 52, 119);
+    border-radius: 5px;
+}
+
+.featured_boks{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+}
+
+.featured_boks h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 60px;
+}
+
+.featured_boks .featured_books_box{
+    width: 95%;
+    height: 60vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
+.featured_boks .featured_books_box .features-books_card{
+    width: 250px;
+    height: 500px;
+    text-align: center;
+    padding: 7px;
+    border: 1px solid #919191;
+    margin: auto 20px;
+}
+
+.featured_boks .featured_books_box .features-books_card:hover{
+    box-shadow: 0 0 20px rgb(38, 52, 119);
+}
+
+.featured_boks .featured_books_box .features-books_card .featured_books_img img{
+    width: 150px;
+}
+
+.featured_boks .featured_books_box .features-books_card .featured_books_tag h2{
+    margin: 12px;
+    
+}
+
+.featured_boks .featured_books_box .features-books_card .featured_books_tag .writer{
+    color:#919191;
+}
+
+.featured_boks .featured_books_box .features-books_card .featured_books_tag .categories{
+    color: rgb(38, 52, 119);
+    margin-top: 8px;
+}
+
+.featured_boks .featured_books_box .features-books_card .featured_books_tag .book_price{
+    margin-top: 8px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.featured_boks .featured_books_box .features-books_card .featured_books_tag .book_price sub{
+    font-weight: 100;
+    padding: 0 5px;
+}
+
+.featured_boks .featured_books_box .features-books_card .featured_books_tag .f_btn{
+    padding: 8px 20px;
+    border: 2px solid rgb(38, 52, 119);
+    text-decoration: none;
+    color:#000;
+    border-radius: 10px;
+}
+</style>
