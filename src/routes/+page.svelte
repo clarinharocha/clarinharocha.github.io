@@ -1,31 +1,12 @@
 <script>
     let livros = [
-      { titulo: "A Rainha Vermelha", autor: "Victoria Aveyard", preco: "30,99", precoAntigo: "34,99", genero: "Romance, Ficção Juvenil", imagem: "/path/to/image1.jpg" },
-      { titulo: "Harry Potter", autor: "J.K. Rowling", preco: "60,99", precoAntigo: "69,90", genero: "Aventura, Fantasia", imagem: "/path/to/image2.jpg" },
-      { titulo: "O Pequeno Príncipe", autor: "Antoine de Saint-Exupéry", preco: "13,50", precoAntigo: "15,60", genero: "Literatura Infantil, Fábula", imagem: "/path/to/image3.jpg" },
-      { titulo: "Amor e Gelato", autor: "Jenna Evans Welch", preco: "42,67", precoAntigo: "46,67", genero: "Ficção", imagem: "/path/to/image4.jpg" },
-      { titulo: "Como Eu Era Antes de Você", autor: "Jojo Moyes", preco: "43,50", precoAntigo: "47,92", genero: "Romance de Amor, Ficção", imagem: "/path/to/image5.jpg" }
+      { titulo: "A Rainha Vermelha", autor: "Victoria Aveyard", preco: "30,99", precoAntigo: "34,99", genero: "Romance, Ficção Juvenil", imagem: "favicon.png" },
+      { titulo: "Harry Potter", autor: "J.K. Rowling", preco: "60,99", precoAntigo: "69,90", genero: "Aventura, Fantasia", imagem: "favicon.png" },
+      { titulo: "O Pequeno Príncipe", autor: "Antoine de Saint-Exupéry", preco: "13,50", precoAntigo: "15,60", genero: "Literatura Infantil, Fábula", imagem: "favicon.png" },
+      { titulo: "Amor e Gelato", autor: "Jenna Evans Welch", preco: "42,67", precoAntigo: "46,67", genero: "Ficção", imagem: "favicon.png" },
+      { titulo: "Como Eu Era Antes de Você", autor: "Jojo Moyes", preco: "43,50", precoAntigo: "47,92", genero: "Romance de Amor, Ficção", imagem: "favicon.png" }
     ];
   </script>
- 
- <header class="bg-light py-3">
-    <div class="container d-flex justify-content-between align-items-center">
-      <div>
-        <img src="/path/to/logo.png" alt="Leia Mais Logo" height="50">
-      </div>
-      <nav>
-        <ul class="nav">
-          <li class="nav-item"><a href="#" class="nav-link" style="color: black;">Início</a></li>
-          <li class="nav-item"><a href="#" class="nav-link" style="color: black;">Destaques</a></li>
-          <li class="nav-item"><a href="#" class="nav-link" style="color: black;">Lançamentos</a></li>
-          <li class="nav-item"><a href="#" class="nav-link" style="color: black;">Sobre a Marca</a></li>
-        </ul>
-      </nav>
-      <div>
-        <button class="btn btn-outline-primary">Carrinho</button>
-      </div>
-    </div>
-  </header>
 
 <section>
   <main>    
@@ -38,9 +19,6 @@
             com preços ótimos e de qualidade altissíma!
           </p>
       </div>
-      <div class="main image">
-          <img src="livros home.png">
-      </div>
      </div>
 </section>
 
@@ -51,14 +29,14 @@
             {#each livros as livro}
             <div class="features-books_card">
               <div class="featured_books_img">
-                <img src="a rainha vermelha.jpg" alt="{livro.titulo}">
+                <img src="favicon.png">
               </div>
               <div class="featured_books_tag">
                 <h2>{livro.titulo}</h2>
                 <p class="writer">{livro.autor}</p>
                 <div class="categories">{livro.genero}</div>
                 <p class="book_price">{livro.preco}<sub><del>{livro.precoAntigo}</del></sub></p>
-                <a href="#" class="f_btn">Saiba Mais</a>
+                <a href="www.google.com" class="f_btn">Saiba Mais</a>
               </div>
             </div>
             {/each}
@@ -76,10 +54,9 @@
       <div>
         <h5>Links</h5>
         <ul class="list-unstyled">
-          <li><a href="#" class="text-white">Início</a></li>
-          <li><a href="#" class="text-white">Destaques</a></li>
-          <li><a href="#" class="text-white">Lançamentos</a></li>
-          <li><a href="#" class="text-white">Sobre a Marca</a></li>
+          <li><a href="/" class="text-white">Início</a></li>
+          <li><a href="/lancamentos" class="text-white">Lançamentos</a></li>
+          <li><a href="/sobre-a-marca" class="text-white">Sobre a Marca</a></li>
         </ul>
       </div>
       <div>
