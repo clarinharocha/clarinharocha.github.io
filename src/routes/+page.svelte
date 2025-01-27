@@ -36,7 +36,7 @@
                 <p class="writer">{livro.autor}</p>
                 <div class="categories">{livro.genero}</div>
                 <p class="book_price">{livro.preco}<sub><del>{livro.precoAntigo}</del></sub></p>
-                <a href="www.google.com" class="f_btn">Saiba Mais</a>
+                <a href="https://www.amazon.com.br/Livros/b?ie=UTF8&node=6740748011" class="f_btn">Saiba Mais</a>
               </div>
             </div>
             {/each}
