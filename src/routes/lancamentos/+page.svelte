@@ -20,7 +20,7 @@
             <i class="fa-solid fa-star"></i>
             <i class="fa-regular fa-star-half-stroke"></i>
           </div>
-          <a href="#" class="arrivals_btn">Saiba Mais</a>
+          <a href="https://www.amazon.com.br/Livros/b?ie=UTF8&node=6740748011" class="arrivals_btn">Saiba Mais</a>
         </div>
       </div>
       {/each}
