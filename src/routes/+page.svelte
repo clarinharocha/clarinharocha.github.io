@@ -1,12 +1,12 @@
 <script>
     let livros = [
-      { titulo: "A Rainha Vermelha", autor: "Victoria Aveyard", preco: "30,99", precoAntigo: "34,99", genero: "Romance, Ficção Juvenil", imagem: "favicon.png" },
-      { titulo: "Harry Potter", autor: "J.K. Rowling", preco: "60,99", precoAntigo: "69,90", genero: "Aventura, Fantasia", imagem: "favicon.png" },
-      { titulo: "O Pequeno Príncipe", autor: "Antoine de Saint-Exupéry", preco: "13,50", precoAntigo: "15,60", genero: "Literatura Infantil, Fábula", imagem: "favicon.png" },
-      { titulo: "Amor e Gelato", autor: "Jenna Evans Welch", preco: "42,67", precoAntigo: "46,67", genero: "Ficção", imagem: "favicon.png" },
-      { titulo: "Como Eu Era Antes de Você", autor: "Jojo Moyes", preco: "43,50", precoAntigo: "47,92", genero: "Romance de Amor, Ficção", imagem: "favicon.png" }
+      { titulo: "A Rainha Vermelha", autor: "Victoria Aveyard", preco: "30,99", precoAntigo: "34,99", genero: "Romance, Ficção Juvenil", imagem: "a rainha vermelha.jpg" },
+      { titulo: "Harry Potter", autor: "J.K. Rowling", preco: "60,99", precoAntigo: "69,90", genero: "Aventura, Fantasia", imagem: "prisioneiro de azkaban.jpg" },
+      { titulo: "O Pequeno Príncipe", autor: "Antoine de Saint-Exupéry", preco: "13,50", precoAntigo: "15,60", genero: "Literatura Infantil, Fábula", imagem: "pequeno principe.jpg" },
+      { titulo: "Amor e Gelato", autor: "Jenna Evans Welch", preco: "42,67", precoAntigo: "46,67", genero: "Ficção", imagem: "amor e gelato.jpg" },
+      { titulo: "Como Eu Era Antes de Você", autor: "Jojo Moyes", preco: "43,50", precoAntigo: "47,92", genero: "Romance de Amor, Ficção", imagem: "como eu era antes de voce.jpg" }
     ];
-  </script>
+</script>
 
 <section>
   <main>    
