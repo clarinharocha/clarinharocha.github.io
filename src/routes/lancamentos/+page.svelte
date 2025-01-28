@@ -9,7 +9,7 @@
       {#each livrosl as livro}
       <div class="arrivals-card">
         <div class="arrivals_image">
-          <img src="{livro.imagem}" alt="{livro.titulo}">
+          <img src="{livro.img}" alt="{livro.titulo}">
         </div>
         <div class="arrivals_tag">
           <p>{livro.titulo}</p>

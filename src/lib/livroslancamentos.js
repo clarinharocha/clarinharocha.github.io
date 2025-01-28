@@ -9,7 +9,7 @@ export const livrosl = [
     },     
     {
         titulo: 'A garota do lago',
-        img: 'a garota do lago.jpg'
+        img: 'a garota do lago.png'
     },     
     {
         titulo: 'A maldição do mar',
@@ -41,7 +41,7 @@ export const livrosl = [
     },    
     {
         titulo: 'Os sete maridos de Evelyn Hugo',
-        img: 'os sete maridos de evlyn hugo.jpg'
+        img: 'os sete maridos de evelyn hugo.jpg'
     },    
     {
         titulo: 'Pedra filosofal',
