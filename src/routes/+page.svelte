@@ -117,77 +117,73 @@ section .main p{
     border-radius: 5px;
 }
 
-.featured_boks{
+.featured_boks .featured_books_box {
     width: 100%;
-    height: 100vh;
-    padding: 70px 0;
-}
-
-.featured_boks h1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-    font-size: 60px;
-}
-
-.featured_boks .featured_books_box{
-    width: 95%;
-    height: 60vh;
+    height: 500px; /* Definindo uma altura fixa para todos os cards */
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    overflow: hidden;
-    overflow-x: scroll;
+    grid-template-columns: repeat(5, 1fr); /* Ajustando o número de colunas */
+    gap: 20px; /* Espaço entre os cards */
+    justify-items: center;
+    padding: 10px;
+    overflow-x: auto; /* Habilitando a rolagem horizontal */
+    scroll-behavior: smooth; /* Animação suave ao rolar horizontalmente */
 }
 
-.featured_boks .featured_books_box .features-books_card{
-    width: 250px;
-    height: 500px;
+.featured_boks .featured_books_box .features-books_card {
+    width: 250px; /* Largura fixa para todos os cards */
+    height: 100%; /* Faz com que os cards preencham toda a altura definida */
     text-align: center;
-    padding: 7px;
+    padding: 15px 10px; /* Aumentei o padding para dar mais espaço entre os elementos */
     border: 1px solid #919191;
-    margin: auto 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuindo o conteúdo dentro do card */
+    margin: 0 10px; /* Adicionando margem para garantir espaçamento horizontal */
 }
 
-.featured_boks .featured_books_box .features-books_card:hover{
-    box-shadow: 0 0 20px rgb(38, 52, 119);
+.featured_boks .featured_books_box .features-books_card .featured_books_img img {
+    width: 100%;
+    height: auto;
+    max-height: 250px; /* Garantindo que a imagem não ultrapasse a altura do card */
+    object-fit: contain; /* A imagem se ajusta sem distorção */
 }
 
-.featured_boks .featured_books_box .features-books_card .featured_books_img img{
-    width: 150px;
+.featured_boks .featured_books_box .features-books_card .featured_books_tag h2 {
+    margin: 12px 0;
+    font-size: 18px;
 }
 
-.featured_boks .featured_books_box .features-books_card .featured_books_tag h2{
-    margin: 12px;
-    
+.featured_boks .featured_books_box .features-books_card .featured_books_tag .writer {
+    color: #919191;
+    font-size: 14px;
 }
 
-.featured_boks .featured_books_box .features-books_card .featured_books_tag .writer{
-    color:#919191;
-}
-
-.featured_boks .featured_books_box .features-books_card .featured_books_tag .categories{
+.featured_boks .featured_books_box .features-books_card .featured_books_tag .categories {
     color: rgb(38, 52, 119);
     margin-top: 8px;
+    font-size: 14px;
 }
 
-.featured_boks .featured_books_box .features-books_card .featured_books_tag .book_price{
+.featured_boks .featured_books_box .features-books_card .featured_books_tag .book_price {
     margin-top: 8px;
     font-weight: bold;
     margin-bottom: 15px;
+    font-size: 16px;
 }
 
-.featured_boks .featured_books_box .features-books_card .featured_books_tag .book_price sub{
+.featured_boks .featured_books_box .features-books_card .featured_books_tag .book_price sub {
     font-weight: 100;
     padding: 0 5px;
 }
 
-.featured_boks .featured_books_box .features-books_card .featured_books_tag .f_btn{
+.featured_boks .featured_books_box .features-books_card .featured_books_tag .f_btn {
     padding: 8px 20px;
     border: 2px solid rgb(38, 52, 119);
     text-decoration: none;
-    color:#000;
+    color: #000;
     border-radius: 10px;
+    margin-top: 15px; /* Espaçamento adequado antes do botão */
+    align-self: flex-end; /* Alinha o botão ao final do card */
 }
 </style>
