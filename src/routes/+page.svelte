@@ -29,7 +29,7 @@
             {#each livros as livro}
             <div class="features-books_card">
               <div class="featured_books_img">
-                <img src="favicon.png" alt="Imagem do Livro">
+                <img src="{livro.imagem}" alt="Imagem do Livro">
               </div>
               <div class="featured_books_tag">
                 <h2>{livro.titulo}</h2>
